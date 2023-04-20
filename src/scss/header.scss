@@ -19,18 +19,18 @@
 }
 
 .body-menu {
+	position: relative;
 	width: 100%;
 	display: flex;
-	flex-wrap: wrap;
 	gap: rem(40);
 	align-items: center;
 	justify-content: space-between;
 	text-transform: uppercase;
 	padding: rem(0) rem(0) rem(0) rem(8);
-	@media (max-width:$mobile){
-		 align-items: center; 
-	}
-
+	// @media (max-width:$mobile){
+	// 	 align-items: center; 
+	// 	 flex-wrap: wrap;
+	// }
 	
 	&__item {
 		font-size: rem(14);
@@ -49,6 +49,10 @@
 		font-size: 14px;
 		font-weight: 600;
 		line-height: math.div(17, 14);
+		@media (max-width:$mobile){
+			display: flex;
+			 flex-wrap: wrap; 
+		}
 	}
 
 	&__logo {
@@ -70,12 +74,11 @@
 		 	z-index: 10;
 			top: rem(30);
 		  	right: rem(15);
-		  }
+		}
 	}
 
 	&__icons {
 		display: flex;
-	
 		gap: rem(21);
 		@media (max-width:$mobile){
 			flex-wrap: wrap-reverse;	  
@@ -104,13 +107,11 @@
   }
 		.menu-open & {
 			left: 0;
-			
 		  &::before{
 			  left: 0;
 		  }
-		
 		}
-  }	
+ 	}	
 }
 
 .gender {
