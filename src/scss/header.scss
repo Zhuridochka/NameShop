@@ -27,14 +27,19 @@
 	justify-content: space-between;
 	text-transform: uppercase;
 	padding: rem(0) rem(0) rem(0) rem(8);
-	// @media (max-width:$mobile){
-	// 	 align-items: center; 
-	// 	 flex-wrap: wrap;
-	// }
+	@media (max-width:$mobile){
+		 flex-direction: column;
+		 justify-content: start;
+		
+	}
 	
 	&__item {
 		font-size: rem(14);
 		transition: text 0.3s ease 0s;
+		@media (max-width:$mobile){
+			margin-top: rem(30);
+			 font-size: rem(26); 
+		}
 		@media (any-hover: hover){
 			&:hover{
 				text-decoration: underline;
@@ -50,8 +55,8 @@
 		font-weight: 600;
 		line-height: math.div(17, 14);
 		@media (max-width:$mobile){
-			display: flex;
-			 flex-wrap: wrap; 
+			font-size: rem(26);
+			flex-direction: column;
 		}
 	}
 
@@ -63,6 +68,11 @@
 			z-index: 5;
 			top: rem(20);
 			left: 37%;
+		}
+		@media (max-width:$mobileSmall){
+			position: relative; 
+			left: 0;
+			margin-top: rem(-20);
 		}
 	}
 
@@ -80,17 +90,13 @@
 	&__icons {
 		display: flex;
 		gap: rem(21);
-		@media (max-width:$mobile){
-			flex-wrap: wrap-reverse;	  
-		}
-	}
+			}
 		@media (max-width:$mobile){
 		position: fixed;
 		top: 0;
 		left: -100%;
 		width: 100%; 
 		height: 100%;
-		flex-wrap: wrap;
 		overflow: auto;
 		transition: left 0.3s ease 0s;
 		background-color: #ffffffd2;
@@ -117,6 +123,11 @@
 .gender {
 	&__link-woman {
 		transition: text 0.3s ease 0s;
+		@media (max-width:$mobile){
+			 &:not(:last-child) {
+			margin-bottom: rem(20);
+			 } 
+		}
 		@media (any-hover: hover){
 			&:hover{
 				text-decoration: underline;
