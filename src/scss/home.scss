@@ -28,10 +28,10 @@
    &__title {
       position: relative;
       z-index: 2;
-      display: flex;
+       display: flex;
       justify-content: center;
       text-align: center;
-      color: #fff;
+      color: #27cf67;
       @include adaptiveValue("font-size", 40, 25);
       
     }
